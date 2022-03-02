@@ -1,33 +1,32 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.Scanner;
 
 public class MigratoryBirds {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>();
         Collections.addAll(arr, 1, 4, 4, 4, 5, 3);
 
-        Collections.sort(arr);
-        // [1, 3, 4, 4, 4, 5]
-        int firstNum = 0;
-        int secondNum = 0;
+        int [] count = new int [5];
+        int maxFreqValue = 0;
+        int freqId = 0;
 
-        HashMap<Integer, Integer> birb = new HashMap<Integer, Integer>();
-
-        for (int i = 0; i < arr.size(); i++) {
-            int tempSum = 0;
-            firstNum = arr.get(i);
-            for (int j = i; j < arr.size(); j++) {
-                secondNum = arr.get(j);
-                if (firstNum == secondNum) {
-                    tempSum++;
-                }
-
-            }
-            birb.put(firstNum, tempSum);
-            System.out.println(birb);
-
+        for (int i = 0; i<arr.size(); i++){
+            int index = arr.get(i);
+            count[index - 1]++;
+            System.out.println(Arrays.toString(count));
+            
         }
-        // System.out.println(birb);
+
+        System.out.println(Arrays.toString(count));
+        for (int i = 0; i < count.length; i++) {
+            if (count[i] > maxFreqValue) {
+                maxFreqValue = count[i];
+                freqId = i + 1;
+            }
+        }
+        
+        System.out.println(freqId);
     }
 }

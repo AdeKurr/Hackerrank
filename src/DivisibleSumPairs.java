@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-import javax.security.auth.kerberos.KerberosCredMessage;
 
 public class DivisibleSumPairs {
     public static void main(String[] args) {

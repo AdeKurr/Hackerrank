@@ -5,11 +5,6 @@ public class NumberLineJumps {
         int x2 = 5;
         int v2 = 3;
 
-        int currentX1 = x1;
-        int currentX2 = x2;
-
-        boolean sameLocation = false;
-
         String result = "";
 
         if (v1>v2&&(x2-x1)%(v1-v2)==0)

@@ -27,10 +27,6 @@ public class PlusMinus {
         minus = minus / arr.size();
         zero = zero / arr.size();
 
-        String plusString = plus + "00000";
-        String zeroString = zero + "00000";
-        String minusString = minus + "00000";
-
         // System.out.println("plus =" + plus);
         // System.out.println("zero =" + zero);
         // System.out.println("minus =" + minus);
